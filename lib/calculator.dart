@@ -64,7 +64,7 @@ class _calculatorstate extends State<calculator> {
                 c++;
               } else if (number == "\u00D7") {
                 c++;
-                if (c == 1) {
+                if (c == 2) {
                   r_number = r_number.substring(0, r_number.length - 1);
                   _number = r_number;
                   c = 0;
@@ -72,9 +72,10 @@ class _calculatorstate extends State<calculator> {
                   r_number += "\u00D7";
                   _number = r_number;
                 }
-              } else if (number == "\u2212") {
                 c++;
-                if (c > 3) {
+              } else if (number == "\u2212") {
+                
+                if (c ==2) {
                   r_number = r_number.substring(0, r_number.length - 1);
                   _number = r_number;
                   c = 0;
@@ -82,16 +83,17 @@ class _calculatorstate extends State<calculator> {
                   r_number += "\u2212";
                   _number = r_number;
                 }
-              } else if (number == "\u002B") {
                 c++;
-                if (c > 3) {
+              } else if (number == "\u002B") {
+              
+                if (c==2) {
                   r_number = r_number.substring(0, r_number.length - 1);
                   _number = r_number;
                   c = 0;
                 } else {
                   r_number += "\u002B";
                   _number = r_number;
-                }
+                }c++;
               }
             });
           },
